@@ -1,3 +1,43 @@
 en:
   views:
-    title: "InternRuby2019MedicalRecordsManagement"
+    layouts:
+      title: "InternRuby2019MedicalRecordsManagement"
+    static_pages:
+      home:
+        medical_record: "Medical Records"
+        phone: "123-456-789"
+        home: "Home"
+        doctors: "Doctors"
+        services: "Services"
+        departments: "Departments"
+        contact: "Contact"
+        signup: "Signup"
+        login: "Login"
+        slide_label: "Slide label"
+        slide_content: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+        recent_blog: "Recent Blog"
+        make_appointment: "Make an appointment"
+        book_appointment: "Book an appointment"
+        our_doctors: "Our Doctors"
+        medicare: "Medicare"
+        content: "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth."
+        navigation: "Navigation"
+        our_services: "Our Services"
+        heart_surgery: "Heart Surgery"
+        surgical_treatment: "Surgical Treatment"
+        general_treatment: "General Treatment"
+        medical_treatment: "Medical Treatment"
+        help_desk: "Help Desk"
+        copyright: "Copyright"
+        copyright2: "2019 All rights reserved"
+      contact:
+        title: "Contact"
+      departments:
+        title: "Departments"
+      services:
+        title: "Services"
+      doctors:
+        title: "Doctors"
+  helpers:
+    application_helper:
+      base_title: "Medical Records"
