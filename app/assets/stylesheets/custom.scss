@@ -1,0 +1,298 @@
+@import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "color.scss";
+
+// Logo
+#logo {
+  font-size: 50px;
+  padding: 0;
+  color: $steel-blue;
+}
+
+#phone_number{
+   float: right;
+   text-align: center;
+   font-size: 25px
+}
+
+.top-icon {
+  float: right;
+  font-size: 20px;
+  border-radius: 15px;
+  padding: 5px;
+  margin-right: 10px;
+  color: $steel-blue;
+}
+
+// homepage
+.header {
+  overflow: hidden;
+  background-color: $white-smoke;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: $gray-scale;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+.carousel {
+  background-color: $onahau;
+
+  .carousel-inner {
+    .carousel-item {
+      img {
+        width: 100%;
+        height: 500px;
+      }
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 50px;
+  font-size: 70px;
+}
+
+.card-deck {
+  margin-bottom: 150px;
+
+  .card {
+    .card-img-top {
+      height: 300px;
+    }
+  }
+}
+
+// Appoiment
+#colorlib-appointment {
+  background: $vivid-blue;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, $turquoise 0%, $light-slate-blue 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, $turquoise 0%, $light-slate-blue 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -o-linear-gradient(45deg, $turquoise 0%, $light-slate-blue 100%);
+  background: linear-gradient(45deg, $turquoise 0%, $light-slate-blue 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$turquoise', endColorstr='$light-slate-blue', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+#colorlib-appointment {
+  padding: 5em 0;
+  clear: both;
+}
+
+#colorlib-appointment h2 {
+  color: $white;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+#colorlib-appointment p {
+  margin-bottom: 0;
+}
+
+#colorlib-appointment .btn-cta {
+  border: 2px solid $white !important;
+  color: $white !important;
+}
+
+#colorlib-appointment .btn-cta:hover {
+  background: $fern !important;
+  border: 2px solid $fern !important;
+  -webkit-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75) !important;
+}
+
+#colorlib-appointment .line-block {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #colorlib-appointment .line-block {
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+
+// Footer
+#colorlib-footer {
+  padding-top: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: $white !important;
+  background: $madison;
+  text-align: center;
+}
+
+#colorlib-footer p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#colorlib-footer .colorlib-footer-links {
+  padding: 0;
+  margin: 0;
+}
+
+#colorlib-footer .colorlib-footer-links li {
+  padding: 0;
+  margin: 0 0 10px 0;
+  list-style: none;
+}
+
+#colorlib-footer .colorlib-footer-links li a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+#colorlib-footer .colorlib-footer-links li a i {
+  color: $summer-sky;
+  padding-right: 8px;
+}
+
+#colorlib-footer .colorlib-footer-links li a:hover {
+  text-decoration: none;
+}
+
+#colorlib-footer .colorlib-widget {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  #colorlib-footer .colorlib-widget {
+    text-align: left;
+  }
+}
+
+#colorlib-footer .colorlib-widget h3 {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Poppins", Arial, sans-serif;
+  color: $white;
+}
+
+#colorlib-footer .form-group input[type="name"],
+#colorlib-footer .form-group input[type="text"],
+#colorlib-footer .form-group input[type="email"],
+#colorlib-footer .form-group textarea {
+  font-size: 14px;
+}
+
+#colorlib-footer .form-group input[type="name"]::-webkit-input-placeholder,
+#colorlib-footer .form-group input[type="text"]::-webkit-input-placeholder,
+#colorlib-footer .form-group input[type="email"]::-webkit-input-placeholder,
+#colorlib-footer .form-group textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#colorlib-footer .form-group input[type="name"]:-moz-placeholder,
+#colorlib-footer .form-group input[type="text"]:-moz-placeholder,
+#colorlib-footer .form-group input[type="email"]:-moz-placeholder,
+#colorlib-footer .form-group textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#colorlib-footer .form-group input[type="name"]::-moz-placeholder,
+#colorlib-footer .form-group input[type="text"]::-moz-placeholder,
+#colorlib-footer .form-group input[type="email"]::-moz-placeholder,
+#colorlib-footer .form-group textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#colorlib-footer .form-group input[type="name"]:-ms-input-placeholder,
+#colorlib-footer .form-group input[type="text"]:-ms-input-placeholder,
+#colorlib-footer .form-group input[type="email"]:-ms-input-placeholder,
+#colorlib-footer .form-group textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+#colorlib-footer .form-group input {
+  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
+  border: none;
+  background: rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#colorlib-footer .form-group textarea {
+  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
+  border: none;
+  background: rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#colorlib-footer .form-group #btn-submit {
+  background: $summer-sky;
+  color: $white;
+}
+
+#colorlib-footer .copyright {
+  background: $madison;
+  padding: 2em;
+}
+
+#colorlib-footer .copyright .block {
+  display: block;
+}
+
+#colorlib-footer .copyright .block a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#colorlib-footer .copyright p {
+  margin-bottom: 0;
+}
