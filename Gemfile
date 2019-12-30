@@ -12,6 +12,9 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "rubocop", "~> 0.46.0", require: false
+gem "bootstrap", "~> 4.4.1"
+gem "jquery-rails"
+gem "font-awesome-sass"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
