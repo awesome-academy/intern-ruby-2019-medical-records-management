@@ -1,4 +1,4 @@
-<% provide :title, t("views.static_pages.home.home") %>
+<% provide :title, t("static_pages.home.home") %>
 <div id="indicator" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#indicator" data-slide-to="0" class="active"></li>
@@ -10,29 +10,29 @@
       <div class="carousel-item active">
         <%= image_tag "img_bg_3.jpg", class: "img-fluid" %>
         <div class="carousel-caption d-none d-md-block">
-          <h5><%= t "views.static_pages.home.slide_label" %></h5>
-          <p><%= t "views.static_pages.home.slide_content" %></p>
+          <h5><%= t ".slide_label" %></h5>
+          <p><%= t ".slide_content" %></p>
         </div>
       </div>
       <div class="carousel-item">
         <%= image_tag "img_bg_2.jpg", class: "img-fluid" %>
         <div class="carousel-caption d-none d-md-block">
-          <h5><%= t "views.static_pages.home.slide_label" %></h5>
-          <p><%= t "views.static_pages.home.slide_content" %></p>
+          <h5><%= t ".slide_label" %></h5>
+          <p><%= t ".slide_content" %></p>
         </div>
       </div>
       <div class="carousel-item">
         <%= image_tag "img_bg_1.jpg", class: "img-fluid" %>
         <div class="carousel-caption d-none d-md-block">
-          <h5><%= t "views.static_pages.home.slide_label" %></h5>
-          <p><%= t "views.static_pages.home.slide_content" %></p>
+          <h5><%= t ".slide_label" %></h5>
+          <p><%= t ".slide_content" %></p>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="container">
-  <h1 class="title"><%= t "views.static_pages.home.recent_blog" %></h1>
+  <h1 class="title"><%= t ".recent_blog" %></h1>
   <div class="card-deck">
     <div class="card">
       <div class="card-body">
@@ -61,14 +61,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-md-offset-12 text-center">
-        <h2 class="line-block"><%= t "views.static_pages.home.make_appointment" %></h2>
-        <p class="line-block"><a href="#" class="btn btn-primary btn-outline btn-cta"><%= t "views.static_pages.home.book_appointment" %> <i class="fas fa-calendar-alt"></i></a></p>
+        <h2 class="line-block"><%= t ".make_appointment" %></h2>
+        <p class="line-block"><a href="#" class="btn btn-primary btn-outline btn-cta"><%= t ".book_appointment" %> <i class="fas fa-calendar-alt"></i></a></p>
       </div>
     </div>
   </div>
 </div>
 <div class="container">
-  <h1 class="title"><%= t "views.static_pages.home.our_doctors" %></h1>
+  <h1 class="title"><%= t ".our_doctors" %></h1>
   <div class="card-deck">
     <div class="card">
       <%= image_tag "staff-1.jpg", class: "card-img-top" %>

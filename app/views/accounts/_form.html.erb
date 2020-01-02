@@ -1,0 +1,17 @@
+<%= form_for(@account) do |f| %>
+  <%= render partial: "shared/error", locals: {object: @account} %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control", placeholder: t(".enter_name") %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: "form-control", placeholder: t(".enter_email")%>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control", placeholder: t(".enter_password") %>
+
+  <%= f.label :password_confirmation, t(".password_confirm") %>
+  <%= f.password_field :password_confirmation, class: "form-control", placeholder: t(".enter_confirmation") %>
+
+  <%= f.submit t(".register"), class: "btn btn-info btn-lg btn-block login-button" %>
+<% end %>
