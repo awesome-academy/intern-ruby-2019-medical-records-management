@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     account = Account.find_by email: params[:session][:email].downcase
     if account&.authenticate params[:session][:password]
       login account
-      remember(account) if params[:session][:remember_me] == "1"
+      check_remember account
       redirect_to account
     else
       flash.now[:danger] = t "session_controller.invalid"
@@ -13,5 +13,19 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    logout
+    flash[:success] = t "session_controller.logout"
+    redirect_to root_path
+  end
+
+  private
+
+  def check_remember account
+    if params[:session][:remember_me] == Settings.remember_me
+      remember account
+    else
+      forget account
+    end
+  end
 end
