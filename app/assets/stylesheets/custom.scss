@@ -301,7 +301,7 @@ h1 {
 }
 
 //form
-#signup-form {
+#form {
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -327,4 +327,18 @@ input {
   .form-control {
     color: red;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
