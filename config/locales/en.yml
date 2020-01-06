@@ -3,7 +3,6 @@ en:
     header:
       medical_record: "Medical Records"
       phone: "123-456-789"
-      home: "Home"
       doctors: "Doctors"
       services: "Services"
       departments: "Departments"
@@ -24,6 +23,7 @@ en:
       copyright2: "2019 All rights reserved"
   static_pages:
     home:
+      home: "Home"
       slide_label: "Slide label"
       slide_content: "Nulla vitae elit libero, a pharetra augue mollis interdum."
       recent_blog: "Recent Blog"
@@ -49,6 +49,10 @@ en:
     new:
       signup_form: "Signup Form"
       title: "Signup"
+  sessions:
+    new:
+      login: "Login"
+      remember: "Remember Me?"
   shared:
     error:
       form_contain: "The form contains"
@@ -57,3 +61,8 @@ en:
   accounts_controller:
     signup_success: "Signup successful"
     user_not_found: "User not found"
+  application_controller:
+    must_logged_in: "You must logged in"
+  session_controller:
+    invalid: "Invalid email/password combination"
+    logout: "Logout successful"

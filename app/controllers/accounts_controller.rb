@@ -1,4 +1,6 @@
 class AccountsController < ApplicationController
+  before_action :require_login, only: :show
+
   def new
     @account = Account.new
   end
@@ -6,6 +8,7 @@ class AccountsController < ApplicationController
   def create
     @account = Account.new account_params
     if @account.save
+      login @account
       flash[:success] = t "accounts_controller.signup_success"
       redirect_to @account
     else
@@ -16,7 +19,7 @@ class AccountsController < ApplicationController
   def show
     @account = Account.find_by id: params[:id]
     return if @account
-    flash[:danger] = t"accounts_controller.user_not_found"
+    flash[:danger] = t "accounts_controller.user_not_found"
     redirect_to root_path
   end
 
