@@ -39,6 +39,12 @@
             <%= current_account.name %>
           <% end %>
         </li>
+        <li class="nav-item">
+          <%= link_to logout_path, method: :delete, class: "nav-link" do %>
+            <i class="fas fa-sign-out-alt"></i>
+            <%= t ".sign_out" %>
+          <% end %>
+        </li>
       <% else %>
         <li class="nav-item">
           <%= link_to signup_path, class: "nav-link" do %>

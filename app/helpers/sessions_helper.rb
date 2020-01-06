@@ -25,4 +25,16 @@ module SessionsHelper
     cookies.permanent.signed[:account_id] = account.id
     cookies.permanent[:remember_token] = account.remember_token
   end
+
+  def forget account
+    account.forget
+    cookies.delete :account_id
+    cookies.delete :remember_token
+  end
+
+  def logout
+    forget current_account
+    session.delete :account_id
+    @current_account = nil
+  end
 end
