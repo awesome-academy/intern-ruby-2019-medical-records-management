@@ -118,6 +118,8 @@ GEM
       dry-logic (~> 1.0, >= 1.0.2)
     erubi (1.9.0)
     execjs (2.7.0)
+    faker (2.10.0)
+      i18n (>= 1.6, < 1.8)
     ffi (1.11.3)
     font-awesome-sass (5.12.0)
       sassc (>= 1.11)
@@ -270,6 +272,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   config
+  faker
   font-awesome-sass
   jbuilder (~> 2.5)
   jquery-rails
