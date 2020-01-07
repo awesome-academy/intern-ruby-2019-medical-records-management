@@ -34,7 +34,7 @@
     <ul class="navbar-nav">
       <% if logged_in? %>
         <li class="nav-item">
-          <%= link_to current_account, class: "nav-link" do %>
+          <%= link_to patient_path(current_account), class: "nav-link" do %>
             <i class="fas fa-user"></i>
             <%= current_account.name %>
           <% end %>

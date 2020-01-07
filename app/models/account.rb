@@ -5,6 +5,8 @@ class Account < ApplicationRecord
   has_one :doctor
   has_many :posts
 
+  enum role: [:patient, :doctor, :admin]
+
   attr_accessor :remember_token
 
   VALID_EMAIL_REGEX = Settings.mail_regex

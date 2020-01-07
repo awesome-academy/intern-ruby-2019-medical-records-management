@@ -67,3 +67,5 @@ en:
   session_controller:
     invalid: "Invalid email/password combination"
     logout: "Logout successful"
+  patients_controller:
+    patient_not_found: "Patient not found"

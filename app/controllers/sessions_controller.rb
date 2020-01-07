@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if account&.authenticate params[:session][:password]
       login account
       check_remember account
-      redirect_to account
+      redirect_path account
     else
       flash.now[:danger] = t "session_controller.invalid"
       render :new
@@ -26,6 +26,16 @@ class SessionsController < ApplicationController
       remember account
     else
       forget account
+    end
+  end
+
+  def redirect_path account
+    if account.patient?
+      redirect_to patient_path(account.patient)
+    elsif account.doctor?
+      redirect_to root_path
+    else
+      redirect_to root_path
     end
   end
 end

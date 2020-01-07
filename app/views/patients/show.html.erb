@@ -1,0 +1,32 @@
+<section class="home_banner_area">
+  <div class="container box_1620">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="banner_content">
+        <div class="media">
+          <div class="d-flex">
+            <%= image_tag @patient.image %>
+          </div>
+          <div class="media-body">
+            <div class="personal_text">
+              <h1><%= @patient.name %></h1>
+              <ul class="list basic_info">
+                <li>
+                  <i class="fas fa-birthday-cake"></i>
+                  <%= @patient.birthday %>
+                </li>
+                <li>
+                  <i class="fas fa-phone-alt"></i>
+                  <%= @patient.phone_number %>
+                </li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i>
+                  <%= @patient.address %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+50.times do |n|
+  name = Faker::Name.name
+  email = "example-#{n + 1}@gmail.com"
+  password = "123456"
+  Account.create!(name: name,
+    email: email,
+    password: password,
+    password_confirmation: password)
+end
+
+Account.all.each do |account|
+  address = Faker::Address.full_address
+  birthday = Faker::Date.birthday(min_age: 18, max_age: 65)
+  image = Faker::Avatar.image
+  phone_number = Faker::PhoneNumber.phone_number
+  Patient.create!(
+    account_id: account.id,
+    address: address,
+    birthday: birthday,
+    image: image,
+    phone_number: phone_number)
+end
