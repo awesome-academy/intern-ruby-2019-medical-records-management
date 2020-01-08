@@ -61,11 +61,20 @@ en:
     base_title: "Medical Records"
   accounts_controller:
     signup_success: "Signup successful"
-    user_not_found: "User not found"
   application_controller:
+    account_not_found: "Account not found"
     must_logged_in: "You must logged in"
   session_controller:
     invalid: "Invalid email/password combination"
     logout: "Logout successful"
   patients_controller:
     patient_not_found: "Patient not found"
+  appointments:
+    new:
+      book_appointment: "Book an Appointment"
+      title: "Book Appointment"
+      create_appointment: "Create Appointment"
+      select_date: "Select date and time"
+  select_doctors:
+    doctor_select:
+      select_doctor: "Select doctor"

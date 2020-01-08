@@ -1,0 +1,27 @@
+<section class="home_banner_area">
+  <div class="container box_1620">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="banner_content">
+        <div class="media">
+          <div class="media-body">
+            <div class="personal_text">
+              <ul class="list basic_info">
+                <li>
+                  <h2>Doctor</h2>
+                  <div class="d-flex">
+                    <%= image_tag appointment.doctor.image %>
+                  </div>
+                  <%= appointment.doctor.name %>
+                </li>
+                <li>
+                  <h2>Time</h2>
+                  <%= appointment.time %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

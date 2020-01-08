@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_06_024702) do
+ActiveRecord::Schema.define(version: 2020_01_09_091651) do
 
-  create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_01_06_024702) do
     t.string "remember_digest"
   end
 
-  create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "appointments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "patient_id"
     t.bigint "doctor_id"
     t.datetime "time"
@@ -32,15 +32,15 @@ ActiveRecord::Schema.define(version: 2020_01_06_024702) do
     t.index ["patient_id"], name: "index_appointments_on_patient_id"
   end
 
-  create_table "doctor_schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "doctor_schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "doctor_id"
-    t.integer "working_day"
+    t.date "working_day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["doctor_id"], name: "index_doctor_schedules_on_doctor_id"
   end
 
-  create_table "doctors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "doctors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "account_id"
     t.string "specialist"
     t.string "image"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_01_06_024702) do
     t.index ["account_id"], name: "index_doctors_on_account_id"
   end
 
-  create_table "medical_records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "medical_records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "appointment_id"
     t.text "content"
     t.datetime "created_at", null: false
@@ -58,10 +58,10 @@ ActiveRecord::Schema.define(version: 2020_01_06_024702) do
     t.index ["appointment_id"], name: "index_medical_records_on_appointment_id"
   end
 
-  create_table "patients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "patients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "account_id"
     t.string "address"
-    t.date "birthday"
+    t.datetime "birthday"
     t.string "image"
     t.string "phone_number"
     t.datetime "created_at", null: false
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 2020_01_06_024702) do
     t.index ["account_id"], name: "index_patients_on_account_id"
   end
 
-  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "account_id"
     t.string "title"
     t.text "content"
