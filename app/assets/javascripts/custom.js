@@ -8,10 +8,9 @@ $(function() {
     dateFormat: 'dd/mm/yy',
     onSelect: function() {
       var dateObject = $(this).datepicker('getDate');
-      var url = $('#your_form_id').attr('action');
       $.ajax({
         type: 'get',
-        url: url,
+        url: "/select_doctors",
         data: {working_day: dateObject}
       })
     }

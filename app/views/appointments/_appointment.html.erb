@@ -1,27 +1,41 @@
-<section class="home_banner_area">
-  <div class="container box_1620">
-    <div class="banner_inner d-flex align-items-center">
-      <div class="banner_content">
-        <div class="media">
-          <div class="media-body">
-            <div class="personal_text">
-              <ul class="list basic_info">
-                <li>
-                  <h2><% t ".doctor" %></h2>
-                  <div class="d-flex">
-                    <%= image_tag appointment.doctor.image %>
-                  </div>
-                  <%= appointment.doctor.name %>
-                </li>
-                <li>
-                  <h2><% t ".time" %></h2>
-                  <%= appointment.time %>
-                </li>
-              </ul>
+<% if appointment.medical_record.blank? %>
+  <section class="home_banner_area">
+    <div class="container box_1620">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="banner_content">
+          <div class="media">
+            <div class="media-body">
+              <div class="personal_text">
+                <ul class="list basic_info">
+                  <li>
+                    <% if current_account.patient? %>
+                      <h2><% t ".doctor" %></h2>
+                      <div class="d-flex">
+                        <%= image_tag appointment.doctor_image %>
+                      </div>
+                      <%= appointment.doctor_name %>
+                    <% elsif current_account.doctor? %>
+                      <h2><% t ".patient" %></h2>
+                      <div class="d-flex">
+                        <%= image_tag appointment.patient_image %>
+                      </div>
+                      <%= appointment.patient_name %>
+                      <%= link_to new_medical_record_path(appointment_id: appointment.id), class: "btn btn-primary btn-outline btn-cta", id: "make_mr" do %>
+                        <%= t ".make_medical_record" %>
+                        <i class="fas fa-calendar-alt"></i>
+                      <% end %>
+                    <% end %>
+                  </li>
+                  <li>
+                    <h2><% t ".time" %></h2>
+                    <%= appointment.time %>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>

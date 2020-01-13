@@ -20,4 +20,8 @@ class ApplicationController < ActionController::Base
   def current_patient
     current_account.patient
   end
+
+  def load_appointment
+    @appointment = Appointment.find_by id: params[:appointment_id]
+  end
 end
