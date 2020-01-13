@@ -97,6 +97,10 @@ en:
     new:
       medical_record: "Medical Record"
       create: "Create medical record"
+    medical_record:
+      time: "Time"
+      doctor: "Doctor"
+      content: "Content"
   medical_records_controller:
     success: "Create successful"
     fail: "Create fail"

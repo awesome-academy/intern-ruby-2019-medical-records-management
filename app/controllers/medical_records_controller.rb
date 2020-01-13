@@ -9,10 +9,10 @@ class MedicalRecordsController < ApplicationController
   def create
     @medical_record = @appointment.create_medical_record medical_record_params
     if @medical_record.save
-      flash[:success] = t ".success"
+      flash[:success] = t "medical_records_controller.success"
       redirect_to doctor_path(@appointment.doctor)
     else
-      flash[:danger] = t ".fail"
+      flash.now[:danger] = t "medical_records_controller.fail"
       render :new
     end
   end

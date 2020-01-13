@@ -1,0 +1,37 @@
+<section class="home_banner_area">
+  <div class="container box_1620">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="banner_content">
+        <div class="media">
+          <div class="media-body">
+            <div class="personal_text">
+              <ul class="list basic_info">
+                <li>
+                  <h2>
+                    <%= t ".doctor" %>
+                  </h2>
+                  <div class="d-flex">
+                    <%= image_tag medical_record.doctor_image %>
+                  </div>
+                  <%= medical_record.doctor_name %>
+                </li>
+                <li>
+                  <h2>
+                    <%= t ".time" %>
+                  </h2>
+                  <%= medical_record.time %>
+                </li>
+                <li>
+                  <h2>
+                    <%= t ".content" %>
+                  </h2>
+                  <%= medical_record.content %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
