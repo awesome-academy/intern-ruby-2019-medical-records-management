@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   resources :accounts
   resources :patients
+  resources :appointments
+  resources :select_doctors, only: %i(index)
 end

@@ -4,12 +4,10 @@
       <i class="fas fa-clinic-medical"></i>
       <%= t ".medical_record" %>
     <% end %>
-    <span id="phone_number">
-      <%= t ".phone" %>
-    </span>
-    <span class="top-icon">
-      <i class="fas fa-phone"></i>
-    </span>
+    <%= link_to new_appointment_path, class: "btn btn-primary btn-outline btn-cta", id: "top-appointment" , "data-turbolinks": false do %>
+      <%= t ".book_appointment" %>
+      <i class="fas fa-calendar-alt"></i>
+    <% end %>
   </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

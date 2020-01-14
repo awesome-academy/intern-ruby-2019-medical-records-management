@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
   before_action :require_login, only: :show
+  before_action :load_account, only: :show
 
   def new
     @account = Account.new
@@ -16,12 +17,7 @@ class AccountsController < ApplicationController
     end
   end
 
-  def show
-    @account = Account.find_by id: params[:id]
-    return if @account
-    flash[:danger] = t "accounts_controller.user_not_found"
-    redirect_to root_path
-  end
+  def show; end
 
   private
 

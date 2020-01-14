@@ -13,10 +13,13 @@ h1 {
   color: $steel-blue;
 }
 
-#phone_number{
-   float: right;
-   text-align: center;
-   font-size: 25px
+#top-appointment{
+  float: right;
+  margin-left: 10px;
+  border-radius: 26px;
+  background-color: $steel-blue;
+  border: $steel-blue;
+  color: white
 }
 
 .top-icon {
@@ -33,6 +36,7 @@ h1 {
   overflow: hidden;
   background-color: $white-smoke;
   padding: 20px 10px;
+  position: relative;
 }
 
 .header a {
@@ -386,4 +390,55 @@ input {
   li {
     list-style: none;
   }
+}
+
+// Appointment
+.appointment-wrap {
+  border: 4px solid $pattens-blue;
+  padding: 3em;
+}
+
+.btn-primary {
+  background: $fern;
+  color: $white;
+  border: 2px solid $fern;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: $pastel-green !important;
+  border-color: $pastel-green !important;
+}
+
+.colorlib-heading h2 {
+  font-size: 32px;
+  color: $black;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .colorlib-heading h2 {
+    font-size: 28px;
+  }
+}
+
+#colorlib-contact {
+  padding: 7em 0;
+  clear: both;
+}
+
+@media screen and (max-width: 768px) {
+  #colorlib-contact {
+    padding: 3em 0;
+  }
+}
+
+.carousel-item img {
+  height: auto !important;
+}
+
+#patient-information{
+  margin-top: 3em
 }

@@ -1,0 +1,31 @@
+<% provide :title, t("appointments.new.title") %>
+<div id="colorlib-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center colorlib-heading">
+        <h2><%= t ".book_appointment" %></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="appointment-wrap animate-box">
+          <%= form_for(@appointment, :html=>{:id=>"your_form_id",:multipart => true,:remote=>true}, url: select_doctors_path) do |f| %>
+            <%= render partial: "shared/error", locals: {object: @appointment} %>
+
+            <div class="form-group">
+              <%= f.label :time %>
+              <%= f.text_field :time, id: "datepicker", class: "form-control", placeholder: t(".select_date"), required: true, autocomplete: :off %>
+            </div>
+
+            <div id="list-doctor">
+            </div>
+
+            <div class="form-group">
+              <%= f.submit t(".create_appointment"), class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

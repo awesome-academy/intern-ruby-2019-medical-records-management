@@ -3,3 +3,4 @@ name_maximum: 50
 email_maximum: 255
 pass_minimum: 6
 remember_me: "1"
+text_area_size: "50x10"
