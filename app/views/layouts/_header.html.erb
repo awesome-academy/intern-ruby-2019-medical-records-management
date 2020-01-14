@@ -32,10 +32,10 @@
     <ul class="navbar-nav">
       <% if logged_in? %>
         <li class="nav-item">
-          <%= link_to patient_path(current_account), class: "nav-link" do %>
-            <i class="fas fa-user"></i>
-            <%= current_account.name %>
-          <% end %>
+            <%= link_to get_info_path, class: "nav-link" do %>
+              <i class="fas fa-user"></i>
+              <%= current_account.name %>
+            <% end %>
         </li>
         <li class="nav-item">
           <%= link_to logout_path, method: :delete, class: "nav-link" do %>

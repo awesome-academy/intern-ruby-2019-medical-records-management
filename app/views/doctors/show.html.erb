@@ -1,21 +1,27 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3 text-center colorlib-heading">
+    <h2 id="patient-information"><%= t ".doc_infor" %></h2>
+  </div>
+</div>
 <section class="home_banner_area">
   <div class="container box_1620">
     <div class="banner_inner d-flex align-items-center">
       <div class="banner_content">
         <div class="media">
+          <div class="d-flex">
+            <%= image_tag @doctor.image %>
+          </div>
           <div class="media-body">
             <div class="personal_text">
+              <h1><%= @doctor.name %></h1>
               <ul class="list basic_info">
                 <li>
-                  <h2><% t ".doctor" %></h2>
-                  <div class="d-flex">
-                    <%= image_tag appointment.doctor.image %>
-                  </div>
-                  <%= appointment.doctor.name %>
+                  <i class="fas fa-birthday-cake"></i>
+                  <%= @doctor.specialist %>
                 </li>
                 <li>
-                  <h2><% t ".time" %></h2>
-                  <%= appointment.time %>
+                  <i class="fas fa-phone-alt"></i>
+                  <%= @doctor.phone_number %>
                 </li>
               </ul>
             </div>

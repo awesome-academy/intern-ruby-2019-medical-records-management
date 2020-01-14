@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
     if account.patient?
       redirect_to patient_path(account.patient)
     elsif account.doctor?
-      redirect_to root_path
+      redirect_to doctor_path(account.doctor)
     else
       redirect_to root_path
     end

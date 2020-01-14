@@ -69,12 +69,24 @@ en:
     logout: "Logout successful"
   patients_controller:
     patient_not_found: "Patient not found"
+  patients:
+    show:
+      information: "Patient information"
+      appointment: "Patient appointment"
   appointments:
     new:
       book_appointment: "Book an Appointment"
       title: "Book Appointment"
       create_appointment: "Create Appointment"
       select_date: "Select date and time"
+    appointment:
+      doctor: "Doctor"
+      time: "Time"
   select_doctors:
     doctor_select:
       select_doctor: "Select doctor"
+  doctors_controller:
+    doctor_not_found: "Doctor not found"
+  doctors:
+    show:
+      doc_infor: "Doctor information"
