@@ -20,6 +20,10 @@ class Account < ApplicationRecord
   validates :password, presence: true, length: {minimum: Settings.pass_minimum},
     allow_nil: true
 
+  scope :search_by_name, ->(search){where("name LIKE '%#{search}%'") if search}
+
+  delegate :address, :phone_number, :birthday, :image, to: :patient
+
   class << self
     def digest string
       cost = if ActiveModel::SecurePassword.min_cost

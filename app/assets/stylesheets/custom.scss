@@ -452,3 +452,21 @@ input {
   bottom: 0;
   left: 70px;
 }
+
+#search-button{
+  padding: 5px 10px;
+}
+
+.page{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 80px;
+}
+
+.next, .last{
+  padding-right: 5px;
+}
+
+.first, .prev{
+  padding-left: 5px
+}

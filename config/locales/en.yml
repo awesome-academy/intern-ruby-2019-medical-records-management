@@ -73,6 +73,12 @@ en:
     show:
       information: "Patient information"
       appointment: "Appointment"
+    index:
+      list: "List of patients"
+      name: "Name"
+      birthday: "Birthday"
+      phone: "Phone number"
+      address: "Address"
   appointments:
     new:
       book_appointment: "Book an Appointment"
@@ -93,6 +99,7 @@ en:
     show:
       doc_infor: "Doctor information"
       appointment: "Patient appointment"
+      search: "Search patients"
   medical_records:
     new:
       medical_record: "Medical Record"
