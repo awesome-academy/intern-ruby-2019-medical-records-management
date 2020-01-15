@@ -27,6 +27,11 @@
                   </h2>
                   <%= medical_record.content %>
                 </li>
+                <li>
+                  <% if current_doctor? medical_record.doctor_id %>
+                    <%= link_to t(".edit"), edit_medical_record_path(medical_record), class: "btn btn-primary btn-outline btn-cta" %>
+                  <% end %>
+                </li>
               </ul>
             </div>
           </div>

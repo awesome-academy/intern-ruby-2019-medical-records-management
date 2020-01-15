@@ -5,10 +5,11 @@ module ApplicationHelper
   end
 
   def get_info_path
-    if current_account.patient?
-      patient_path(current_account)
-    elsif current_account.doctor?
-      doctor_path(current_account.doctor.id)
-    end
+    return patient_path(current_account) if current_account.patient?
+    return doctor_path(current_account.doctor.id) if current_account.doctor?
+  end
+
+  def current_doctor? doctor_id
+    current_account.doctor? && doctor_id == current_account.doctor_id
   end
 end

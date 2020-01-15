@@ -108,6 +108,9 @@ en:
       time: "Time"
       doctor: "Doctor"
       content: "Content"
+      edit: "Edit"
   medical_records_controller:
     success: "Create successful"
     fail: "Create fail"
+    updated: "Edit successful"
+    not_found: "Not found"

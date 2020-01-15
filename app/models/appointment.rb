@@ -6,5 +6,5 @@ class Appointment < ApplicationRecord
   APPOINTMENT_PARAMS = %i(time).freeze
 
   delegate :name, :image, :id, to: :patient, prefix: true
-  delegate :name, :image, to: :doctor, prefix: true
+  delegate :name, :image, :id, to: :doctor, prefix: true
 end
