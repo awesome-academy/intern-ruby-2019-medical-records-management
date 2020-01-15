@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="appointment-wrap animate-box">
-          <%= form_for(@appointment, :html=>{:id=>"your_form_id",:multipart => true,:remote=>true}, url: select_doctors_path) do |f| %>
+          <%= form_for(@appointment, :html=>{:id=>"your_form_id",:multipart => true,:remote=>true}) do |f| %>
             <%= render partial: "shared/error", locals: {object: @appointment} %>
 
             <div class="form-group">

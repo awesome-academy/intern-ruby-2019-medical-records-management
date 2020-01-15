@@ -72,7 +72,7 @@ en:
   patients:
     show:
       information: "Patient information"
-      appointment: "Patient appointment"
+      appointment: "Appointment"
   appointments:
     new:
       book_appointment: "Book an Appointment"
@@ -81,7 +81,9 @@ en:
       select_date: "Select date and time"
     appointment:
       doctor: "Doctor"
+      patient: "Patient"
       time: "Time"
+      make_medical_record: "Make medical records"
   select_doctors:
     doctor_select:
       select_doctor: "Select doctor"
@@ -90,3 +92,11 @@ en:
   doctors:
     show:
       doc_infor: "Doctor information"
+      appointment: "Patient appointment"
+  medical_records:
+    new:
+      medical_record: "Medical Record"
+      create: "Create medical record"
+  medical_records_controller:
+    success: "Create successful"
+    fail: "Create fail"

@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :appointments
   resources :select_doctors, only: %i(index)
   resources :doctors
+  resources :medical_records, only: %i(new create)
 end
