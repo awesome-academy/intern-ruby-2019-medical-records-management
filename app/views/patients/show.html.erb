@@ -40,18 +40,18 @@
     <h2><%= t ".appointment" %></h2>
   </div>
 </div>
-<section class="home_banner_area">
-  <div class="container box_1620">
-    <div class="banner_inner d-flex align-items-center">
-      <div class="banner_content">
-        <div class="media">
-          <% if @patient.appointments.any? %>
-            <ol>
-              <%= render @appointments %>
-            </ol>
-          <% end %>
-        </div>
-      </div>
-    </div>
+<% if @patient.appointments.any? %>
+  <ol>
+    <%= render @appointments %>
+  </ol>
+<% end %>
+<div class="row">
+  <div class="col-md-6 offset-md-3 text-center colorlib-heading">
+    <h2><%= t "application_helper.base_title" %></h2>
   </div>
-</section>
+</div>
+<% if @patient.appointments.any? %>
+  <ol>
+    <%= render @medical_records %>
+  </ol>
+<% end %>
