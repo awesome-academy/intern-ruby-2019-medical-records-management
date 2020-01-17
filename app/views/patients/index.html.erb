@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3 text-center colorlib-heading">
+    <h2 id="patient-information"><%= t ".list" %></b> (<%= @patients_searched.count %>)</h2>
+  </div>
+</div>
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th><%= t ".name" %></th>
+        <th><%= t ".birthday" %></th>
+        <th><%= t ".phone" %></th>
+        <th><%= t ".address" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @patients.each do |patient| %>
+        <tr>
+          <td><%= link_to patient.name, patient_path(patient) %></td>
+          <td><%= patient.birthday %></td>
+          <td><%= patient.phone_number %></td>
+          <td><%= patient.address %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="container">
+  <%= paginate @patients %>
+</div>
