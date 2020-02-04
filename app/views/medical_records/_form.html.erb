@@ -1,0 +1,15 @@
+<%= form_for(@medical_record) do |f| %>
+  <%= render partial: "shared/error", locals: {object: @medical_record} %>
+
+  <%= hidden_field_tag :appointment_id, params[:appointment_id] %>
+
+  <%= fields_for @patient do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control", disabled: true %>
+  <% end %>
+
+  <%= f.label :content %>
+  <%= f.text_area(:content, size: Settings.text_area_size, class: "form-control") %>
+
+  <%= f.submit t("medical_records.new.create"), class: "btn btn-info btn-lg btn-block login-button" %>
+<% end %>

@@ -23,6 +23,7 @@ class Account < ApplicationRecord
   scope :search_by_name, ->(search){where("name LIKE '%#{search}%'") if search}
 
   delegate :address, :phone_number, :birthday, :image, to: :patient
+  delegate :id, to: :doctor, prefix: true
 
   class << self
     def digest string
