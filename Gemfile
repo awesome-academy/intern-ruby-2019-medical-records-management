@@ -23,6 +23,11 @@ gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "faker"
+  gem "database_cleaner", "~> 1.5"
+  gem "shoulda-matchers", "~> 3.0", require: false
+  gem "factory_bot_rails"
+  gem "rspec-rails", "~> 3.4"
 end
 
 group :development do
@@ -34,8 +39,7 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
-  gem "chromedriver-helper"
-  gem "selenium-webdriver"
+  gem 'database_cleaner-active_record'
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
