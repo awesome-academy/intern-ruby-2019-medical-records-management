@@ -27,7 +27,6 @@ RSpec.describe Account, type: :model do
     context "Before save" do
       it "Downcase email" do
         expect(account.email).to eq (account.email.downcase)
-        account.destroy
       end
     end
   end
@@ -52,7 +51,6 @@ RSpec.describe Account, type: :model do
 
       it "Remember success" do
         expect(account.remember_digest).not_to be_nil
-        account.destroy
       end
     end
 
@@ -64,7 +62,6 @@ RSpec.describe Account, type: :model do
 
       it "Forget sucess" do
         expect(account.remember_digest).to be_nil
-        account.destroy
       end
     end
 
@@ -72,12 +69,10 @@ RSpec.describe Account, type: :model do
       it "Authenticated true" do
         account.remember
         expect(account.authenticated? account.remember_token).to be true
-        account.destroy
       end
 
       it "Authenticated false" do
         expect(account.authenticated? account.remember_token).not_to be true
-        account.destroy
       end
     end
   end
