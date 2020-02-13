@@ -114,3 +114,6 @@ en:
     fail: "Create fail"
     updated: "Edit successful"
     not_found: "Not found"
+  models:
+    appointment:
+      invalid_time: "can't be in the past"
