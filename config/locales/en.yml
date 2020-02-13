@@ -73,6 +73,7 @@ en:
     show:
       information: "Patient information"
       appointment: "Appointment"
+      search: "Search doctors"
     index:
       list: "List of patients"
       name: "Name"
@@ -100,6 +101,10 @@ en:
       doc_infor: "Doctor information"
       appointment: "Patient appointment"
       search: "Search patients"
+    index:
+      name: "Name"
+      speacial_list: "Speacial List"
+      phone: "Phone"
   medical_records:
     new:
       medical_record: "Medical Record"
