@@ -8,10 +8,9 @@
     </div>
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <div class="appointment-wrap animate-box">
-          <%= form_for(@appointment, :html=>{:id=>"your_form_id",:multipart => true,:remote=>true}) do |f| %>
-            <%= render partial: "shared/error", locals: {object: @appointment} %>
-
+        <div class="appointment-wrap animate-box" data-turbolinks="false">
+          <%= form_for @appointment do |f| %>
+            <%= render "shared/error", object: f.object %>
             <div class="form-group">
               <%= f.label :time %>
               <%= f.text_field :time, id: "datepicker", class: "form-control", placeholder: t(".select_date"), required: true, autocomplete: :off %>
