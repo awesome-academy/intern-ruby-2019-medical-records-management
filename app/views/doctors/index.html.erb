@@ -1,0 +1,24 @@
+<% provide :title, t("static_pages.doctors.title") %>
+
+<div class="container">
+  <%= search_form_for @q, url: doctors_path do |f| %>
+    <%= f.search_field :name_or_doctor_specialist_cont %>
+    <%= f.submit %>
+  <% end %>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th><%= t ".name" %></th>
+        <th><%= t ".special_list" %></th>
+        <th><%= t ".phone" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "doctor", collection: @doctors, as: :account %>
+    </tbody>
+  </table>
+</div>
+<div class="container">
+  <%= paginate @doctors %>
+</div>

@@ -1,3 +1,21 @@
+<% if current_account.doctor? %>
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center colorlib-heading">
+      <%= form_tag(patients_path, method: :get, class: "navbar-form navbar-left") do %>
+          <div class="form-group row">
+            <div class="col-md-11 text-center colorlib-heading">
+              <%= search_field_tag :search, params[:search], placeholder: t(".search"), class: "form-control" %>
+            </div>
+            <div class="col-md-1 text-center colorlib-heading">
+              <%= button_tag type: "submit", class: "button my-button", id: "search-button" do %>
+                <i class="fas fa-search"></i>
+              <% end %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
 <div class="row">
   <div class="col-md-6 offset-md-3 text-center colorlib-heading">
     <h2 id="patient-information"><%= t ".doc_infor" %></h2>
@@ -31,22 +49,6 @@
     </div>
   </div>
 </section>
-<div class="row">
-  <div class="col-md-6 offset-md-3 text-center colorlib-heading">
-    <%= form_tag(patients_path, :method => "get", class: "navbar-form navbar-left") do %>
-        <div class="form-group row">
-          <div class="col-md-11 text-center colorlib-heading">
-            <%= search_field_tag :search, params[:search], placeholder: t(".search"), class: "form-control" %>
-          </div>
-          <div class="col-md-1 text-center colorlib-heading">
-            <%= button_tag type: "submit", class: "button my-button", id: "search-button" do %>
-              <i class="fas fa-search"></i>
-            <% end %>
-          </div>
-        </div>
-    <% end %>
-  </div>
-</div>
 <div class="row">
   <div class="col-md-6 offset-md-3 text-center colorlib-heading">
     <h2><%= t ".appointment" %></h2>
