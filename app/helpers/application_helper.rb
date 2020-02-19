@@ -12,4 +12,8 @@ module ApplicationHelper
   def current_doctor? doctor_id
     current_account.doctor? && doctor_id == current_account.doctor_id
   end
+
+  def select_doctors_workingdays
+    @working_days.pluck(:working_day).map{|a| a.strftime(Settings.date_format)}
+  end
 end

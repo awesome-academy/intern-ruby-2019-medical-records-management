@@ -1,3 +1,4 @@
 <div class="form-group">
-  <%= select_tag "doctor_id", options_for_select(@select_doctor.collect{|doc_sch| [doc_sch.name, doc_sch.id]}), required: true, class: "form-control", prompt: t(".select_doctor") %>
+  <%= select_tag "doctor_id", options_for_select(@select_doctors || []),
+    required: true, class: "form-control", prompt: t(".select_doctor") %>
 </div>

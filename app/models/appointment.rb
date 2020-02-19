@@ -4,6 +4,7 @@ class Appointment < ApplicationRecord
   has_one :medical_record
 
   validate :check_time
+  validates :time , presence: true
 
   APPOINTMENT_PARAMS = %i(time).freeze
 

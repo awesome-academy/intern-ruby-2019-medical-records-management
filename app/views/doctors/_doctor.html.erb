@@ -1,5 +1,13 @@
 <tr>
-  <td><%= link_to account.name, account_path(account.doctor_id) %></td>
+  <td><%= link_to account.name, doctor_path(account.doctor_id) %></td>
   <td><%= account.doctor_specialist %></td>
   <td><%= account.doctor_phone_number %></td>
+  <% if current_account.patient? %>
+    <td>
+      <%= link_to new_appointment_path(doctor_id: account.doctor_id), class: "btn btn-primary btn-outline btn-cta", id: "top-appointment" , "data-turbolinks": false do %>
+        <%= t "appointments.new.book_appointment" %>
+        <i class="fas fa-calendar-alt"></i>
+      <% end %>
+    </td>
+  <% end %>
 </tr>
