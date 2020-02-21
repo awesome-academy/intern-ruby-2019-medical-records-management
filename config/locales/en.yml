@@ -120,6 +120,10 @@ en:
     fail: "Create fail"
     updated: "Edit successful"
     not_found: "Not found"
+  notifications_controller:
+    fail: "Fail"
+  appointments_controller:
+    noti_content: "%{patient_name} book %{doctor_name}"
   models:
     appointment:
       invalid_time: "can't be in the past"

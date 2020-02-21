@@ -12,6 +12,7 @@ class AppointmentsController < ApplicationController
     @appointment = current_patient.appointments.build \
       appointment_params.merge(doctor_id: params[:doctor_id])
     if @appointment.save
+      notify
       flash[:success] = "Book successful"
       redirect_to current_account.patient
     else
@@ -29,11 +30,18 @@ class AppointmentsController < ApplicationController
 
   def load_doctor
     return unless params[:doctor_id].present?
-      @doctor = Doctor.find_by id: params[:doctor_id]
+    @doctor = Doctor.find_by id: params[:doctor_id]
 
-      return if @doctor
-      flash[:danger] = t "doctors_controller.doctor_not_found"
-      redirect_to doctors_path
-    end
+    return if @doctor
+    flash[:danger] = t "doctors_controller.doctor_not_found"
+    redirect_to doctors_path
+  end
+
+  def notify
+    current_patient.notifications.create notification: noti_content, doctor_id: params[:doctor_id]
+  end
+
+  def noti_content
+    t("appointments_controller.noti_content", patient_name: current_account.name, doctor_name: @doctor.name)
   end
 end
