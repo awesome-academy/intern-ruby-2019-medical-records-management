@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   resources :doctors
   resources :medical_records
   resources :notifications
+
+  mount ActionCable.server => '/cable'
 end
