@@ -105,6 +105,7 @@ en:
       name: "Name"
       speacial_list: "Speacial List"
       phone: "Phone"
+      book: "Book"
   medical_records:
     new:
       medical_record: "Medical Record"
@@ -122,3 +123,6 @@ en:
   models:
     appointment:
       invalid_time: "can't be in the past"
+  javascripts:
+    custom:
+      select_available_date: "Select available date"

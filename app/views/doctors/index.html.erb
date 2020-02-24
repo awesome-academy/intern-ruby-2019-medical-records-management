@@ -12,6 +12,9 @@
         <th><%= t ".name" %></th>
         <th><%= t ".special_list" %></th>
         <th><%= t ".phone" %></th>
+        <% if current_account.patient? %>
+          <th><%= t ".book" %></th>
+        <% end %>
       </tr>
     </thead>
     <tbody>

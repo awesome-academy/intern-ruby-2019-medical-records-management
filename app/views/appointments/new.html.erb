@@ -11,13 +11,28 @@
         <div class="appointment-wrap animate-box" data-turbolinks="false">
           <%= form_for @appointment do |f| %>
             <%= render "shared/error", object: f.object %>
-            <div class="form-group">
-              <%= f.label :time %>
-              <%= f.text_field :time, id: "datepicker", class: "form-control", placeholder: t(".select_date"), required: true, autocomplete: :off %>
-            </div>
 
-            <div id="list-doctor">
-            </div>
+            <% if params[:doctor_id].present? %>
+              <div class="form-group">
+                <%= f.label :time %>
+                <%= f.text_field :time, id: "datepicker1", class: "form-control", placeholder: t(".select_date"), required: true, autocomplete: :off %>
+              </div>
+
+              <div id="list-doctor">
+                <%= hidden_field_tag :doctor_id, params[:doctor_id] %>
+                <%= label_tag "name" %>
+                <%= text_field_tag "doctor_name", @doctor.name, class: "form-control", disabled: true %>
+              </div>
+            <% else %>
+              <div class="form-group">
+                <%= f.label :time %>
+                <%= f.text_field :time, id: "datepicker", class: "form-control", placeholder: t(".select_date"), required: true, autocomplete: :off %>
+              </div>
+
+              <div id="list-doctor">
+                <%= render "select_doctors/doctor_select" %>
+              </div>
+            <% end %>
 
             <div class="form-group">
               <%= f.submit t(".create_appointment"), class: "btn btn-primary" %>
@@ -27,4 +42,5 @@
       </div>
     </div>
   </div>
+  <p id ="data_date" data-id="<%= select_doctors_workingdays %>"></p>
 </div>
