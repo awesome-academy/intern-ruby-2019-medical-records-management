@@ -18,7 +18,7 @@ gem "mysql2", ">= 0.4.4", "< 0.6.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.4", ">= 5.2.4.1"
 gem "ransack"
-gem "rubocop", "~> 0.54.0", require: false
+gem "rubocop", "~> 0.80.0", require: false
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
