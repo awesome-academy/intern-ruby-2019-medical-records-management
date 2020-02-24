@@ -16,4 +16,8 @@ module ApplicationHelper
   def select_doctors_workingdays
     @working_days.pluck(:working_day).map{|a| a.strftime(Settings.date_format)}
   end
+
+  def current_doctor
+    current_account.doctor
+  end
 end

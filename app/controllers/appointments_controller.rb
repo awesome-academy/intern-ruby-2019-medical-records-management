@@ -13,6 +13,8 @@ class AppointmentsController < ApplicationController
       appointment_params.merge(doctor_id: params[:doctor_id])
     if @appointment.save
       notify
+      ActionCable.server.broadcast "notification_channel_#{@doctor.account.id}",
+        notification: render_notification(Notification.last), counter: @doctor.notifications.unseen.size
       flash[:success] = "Book successful"
       redirect_to current_account.patient
     else

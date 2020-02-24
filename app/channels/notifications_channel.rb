@@ -1,6 +1,6 @@
 class NotificationsChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "notification_channel_#{message_doctor.id}"
+    stream_from "notification_channel_#{message_account.id}"
   end
 
   def unsubscribed

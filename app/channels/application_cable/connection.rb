@@ -1,12 +1,12 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
-    identified_by :message_doctor
+    identified_by :message_account
 
     def connect
       account = Account.find_by id: cookies.signed[:account_id]
 
-      if doctor
-        self.message_doctor = account.doctor
+      if account
+        self.message_account = account
       else
         reject_unauthorized_connection
       end

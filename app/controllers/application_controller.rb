@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  include ApplicationHelper
   before_action :load_noti_user
 
   def require_login
@@ -28,6 +29,10 @@ class ApplicationController < ActionController::Base
 
   def load_noti_user
     return unless logged_in? && current_account.doctor?
-    @notifications = current_account.doctor.notifications.order_by_create
+    @notifications = current_doctor.notifications.order_by_create
+  end
+
+  def render_notification notification
+    ApplicationController.renderer.render partial: "notifications/notification", locals: {notification: notification}
   end
 end
