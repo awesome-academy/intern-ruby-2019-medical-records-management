@@ -470,3 +470,34 @@ input {
 .first, .prev{
   padding-left: 5px
 }
+
+#noti {
+  .noti{
+    margin-top: 5px;
+    width: 300px;
+    min-height: 60px;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .seen {
+      word-wrap: break-word;
+      height: 60px;
+      padding: 8px;
+      border-bottom: 1px solid $gray-scale;
+      background-color: $white;
+      a {
+        text-decoration: none;
+      }
+    }
+    .unseen {
+      word-wrap: break-word;
+      height: 60px;
+      padding: 8px;
+      border-bottom: 1px solid $gray-scale;
+      background-color: $white-smoke;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  before_action :load_noti_user
 
   def require_login
     return if logged_in?
@@ -23,5 +24,10 @@ class ApplicationController < ActionController::Base
 
   def load_appointment
     @appointment = Appointment.find_by id: params[:appointment_id]
+  end
+
+  def load_noti_user
+    return unless logged_in? && current_account.doctor?
+    @notifications = current_account.doctor.notifications.order_by_create
   end
 end
